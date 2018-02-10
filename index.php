@@ -1,6 +1,6 @@
 <?php
 include 'Codraz.php';
-
+//Commented by Dark Folt
 $key = "";
 
 if(isset($_POST['btc'])) {
