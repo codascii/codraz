@@ -5,6 +5,9 @@
 */
 class CODRAZ
 {
+	const CHIFFRER = "chiffrer";
+	const DECHIFFRER = "dechiffrer";
+	
 	public static function crypt($text, $key) {
 		//	Initialisation du tableau contenant les caractères chiffrable
 		for ($i=33; $i <= 126; $i++) { 
