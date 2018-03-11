@@ -17,7 +17,8 @@ body {
       width: 50%;
       margin: 0 auto;
       margin-bottom: 15px;
-      display: flex; }
+      display: flex;
+      position: relative; }
       body form#codraz div#keyzone ::placeholder {
         color: #333333;
         opacity: 1;
@@ -61,6 +62,8 @@ body {
           body form#codraz div#keyzone div#action-bloc div#action div.radio-group label {
             display: block;
             margin-left: 10px; }
+            body form#codraz div#keyzone div#action-bloc div#action div.radio-group label:hover {
+              cursor: pointer; }
         body form#codraz div#keyzone div#action-bloc div#action div.radio-group:nth-child(1) {
           margin-right: 20px; }
         body form#codraz div#keyzone div#action-bloc div#action div.radio {
@@ -70,11 +73,15 @@ body {
           border: 2px solid #FF6600;
           display: inline-block; }
           body form#codraz div#keyzone div#action-bloc div#action div.radio:hover {
-            cursor: pointer;
-            background-color: #FF6600;
-            transition: all 0.3s; }
+            cursor: pointer; }
         body form#codraz div#keyzone div#action-bloc div#action div.radio.checked {
-          background-color: #FF6600; }
+          background-color: #FF6600;
+          transition: all .3s; }
+    body form#codraz div#help {
+      width: 50%;
+      margin: 0 auto;
+      font-size: .78em;
+      color: #66a3ff; }
     body form#codraz div#action-hidden {
       width: 50%;
       margin: 0 auto;
@@ -118,6 +125,15 @@ body {
       body form#codraz div#copyright p {
         color: #737373;
         font-size: .8em; }
+        body form#codraz div#copyright p a {
+          color: #797979;
+          font-size: 1.5em;
+          display: inline-block;
+          padding: 0 5px;
+          transition: all .2s; }
+          body form#codraz div#copyright p a:hover {
+            color: #FF6600;
+            transition: all .4s; }
         body form#codraz div#copyright p strong {
           margin-right: 5px;
           padding-right: 5px;
@@ -180,6 +196,8 @@ body {
             transition: all 0.3s; }
         form#codraz div#keyzone div#action-bloc div#action div.radio.checked {
           background-color: #FF6600; }
+    form#codraz div#help {
+      width: 90% !important; }
     form#codraz div#action-hidden {
       width: 90% !important;
       margin: 0 auto;
@@ -277,6 +295,8 @@ body {
               transition: all 0.3s; }
           form#codraz div#keyzone div#action-bloc div#action div.radio.checked {
             background-color: #FF6600; }
+    form#codraz div#help {
+      width: 95% !important; }
     form#codraz div#action-hidden {
       width: 75%;
       margin: 0 auto; }

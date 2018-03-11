@@ -24,6 +24,7 @@ body{
 			margin: 0 auto;
 			margin-bottom: 15px;
 			display: flex;
+			position: relative;
 
 			::placeholder {
 			    color: #333333;
@@ -82,6 +83,10 @@ body{
 						label{
 							display: block;
 							margin-left: 10px;
+
+							&:hover{
+								cursor: pointer;
+							}
 						}
 					}
 
@@ -97,17 +102,23 @@ body{
 						display: inline-block;
 
 						&:hover{
-							cursor: pointer;
-							background-color: #FF6600;
-							transition: all .3s
+							cursor: pointer;							
 						}
 					}
 
 					div.radio.checked{
 						background-color: #FF6600;
+						transition: all .3s;
 					}
 				}
 			}			
+		}
+
+		div#help{
+			width: 50%;
+			margin: 0 auto;
+			font-size: .78em;
+			color: #66a3ff;
 		}
 
 		div#action-hidden{
@@ -166,6 +177,19 @@ body{
 			p{
 				color: #737373;
 				font-size: .8em;
+
+				a{
+					color: #797979;
+					font-size: 1.5em;
+					display: inline-block;
+					padding: 0 5px;
+					transition: all .2s;
+
+					&:hover{
+						color: #FF6600;
+						transition: all .4s;
+					}
+				}
 
 				strong{
 					margin-right: 5px;
