@@ -51,6 +51,9 @@ if(isset($_POST['btc'])) {
 				<!-- Police image : Splincide -->
 				<img src="images/codraz.png" alt="Logo Codraz" />
 			</div>
+			<div id="logo">				
+				<img src="images/favicon.png" alt="Logo Codraz" />
+			</div>
 			<div id="keyzone">
 				<span>Clé de chiffrage</span>
 				<input type="text" name="key" id="key"/>

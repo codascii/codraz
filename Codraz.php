@@ -5,7 +5,7 @@
 */
 class CODRAZ
 {
-	public static function crypt(string $text, string $key) : string {
+	public static function crypt($text, $key) {
 		//	Initialisation du tableau contenant les caractères chiffrable
 		for ($i=33; $i <= 126; $i++) { 
 			// char chr(ascii) : retourne un char à partir de son code ascii
@@ -47,7 +47,7 @@ class CODRAZ
 		return $text;
 	}
 
-	public static function decrypt(string $text, string $key) : string {
+	public static function decrypt($text, $key) {
 		//	Initialisation du tableau contenant les caractères déchiffrable
 		for ($i=33; $i <= 126; $i++) { 
 			// char chr(ascii) : retourne un char à partir de son code ascii
@@ -85,7 +85,7 @@ class CODRAZ
 		return $text;
 	}
 
-	public static function genKey(int $length = 5) : string {
+	public static function genKey($length = 5) {
 		$length = ($length <= 0) ? 5 : $length;
 
 		$key = ""; // Initialisation de la clé à une chaîne vide
@@ -100,7 +100,7 @@ class CODRAZ
 		return $key;
 	}
 
-	public static function getSumAscii(string $key) : int {
+	public static function getSumAscii($key) {
 		$keyLength = strlen($key);
 		$sum = 0;
 
