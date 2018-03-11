@@ -33,16 +33,12 @@ if(isset($_POST['btc'])) {
         <meta name="application-name" content="Codraz"/>
         <link rel="icon" sizes="144x144" href="images/favicon.png">
 		<link rel="stylesheet" href="assets/css/codraz.css"> 
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="assets/js/codraz.js"></script>
 		<script type="text/javascript" language="javascript">
-            window.onload = function() {
-                var key = document.getElementById("r_key");
-                var keyForm = document.getElementById("f_key");
-
-                key.onblur = function() { 
-                	keyForm.value = key.value;
-                };
-            };
+			window.onload = function(e) {
+				//alert("load");
+			};
         </script>
 	</head>
 	<body>
@@ -51,22 +47,22 @@ if(isset($_POST['btc'])) {
 				<!-- Police image : Splincide -->
 				<img src="images/codraz.png" alt="Logo Codraz" />
 			</div>
-			<div id="logo">				
-				<img src="images/favicon.png" alt="Logo Codraz" />
-			</div>
 			<div id="keyzone">
 				<span>Clé de chiffrage</span>
-				<input type="text" name="key" id="key"/>
-				<div id="action">
-					<div class="radio-group">
-						<div class="radio checked"></div>
-						<label>Chiffrer</label>
+				<input type="text" name="key" id="key" placeholder="Clé de chiffrage" />
+				<div id="action-bloc">
+					<img src="images/favicon.png" alt="Logo Codraz"/>
+					<div id="action">
+						<div class="radio-group">
+							<div class="radio checked"></div>
+							<label>Chiffrer</label>
+						</div>
+						<div class="radio-group">
+							<div class="radio"></div>
+							<label>Déchiffrer</label>
+						</div>
 					</div>
-					<div class="radio-group">
-						<div class="radio"></div>
-						<label>Déchiffrer</label>
-					</div>
-				</div>				
+				</div>			
 			</div>
 			<div id="action-hidden">
 				<input type="radio" name="action" checked="checked" />
