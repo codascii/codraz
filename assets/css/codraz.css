@@ -1,6 +1,8 @@
 body {
   background-color: #202020;
   color: #FFFFFF;
+  margin: 0px;
+  padding: 0px;
   font-family: Arial, serif, sans-serif; }
   body form#codraz {
     /*width: 1080px;*/
@@ -11,13 +13,21 @@ body {
       text-align: center; }
       body form#codraz div#name img {
         width: 50%; }
-    body form#codraz div#logo {
-      display: none; }
     body form#codraz div#keyzone {
       width: 50%;
       margin: 0 auto;
       margin-bottom: 15px;
       display: flex; }
+      body form#codraz div#keyzone ::placeholder {
+        color: #333333;
+        opacity: 1;
+        /* Firefox */ }
+      body form#codraz div#keyzone :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: #333333; }
+      body form#codraz div#keyzone ::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: #333333; }
       body form#codraz div#keyzone span {
         display: inline-block;
         width: 18%;
@@ -37,29 +47,33 @@ body {
         font-size: 1.2em;
         padding: 0 10px;
         color: #FFFFFF; }
-      body form#codraz div#keyzone div#action {
+      body form#codraz div#keyzone div#action-bloc img {
+        display: none; }
+      body form#codraz div#keyzone div#action-bloc div#action {
         width: 36%;
         padding-top: 15px;
         display: flex; }
-        body form#codraz div#keyzone div#action div.radio-group {
+        body form#codraz div#keyzone div#action-bloc div#action img {
+          display: none; }
+        body form#codraz div#keyzone div#action-bloc div#action div.radio-group {
           font-size: 1.2em;
           display: flex; }
-          body form#codraz div#keyzone div#action div.radio-group label {
+          body form#codraz div#keyzone div#action-bloc div#action div.radio-group label {
             display: block;
             margin-left: 10px; }
-        body form#codraz div#keyzone div#action div.radio-group:nth-child(1) {
+        body form#codraz div#keyzone div#action-bloc div#action div.radio-group:nth-child(1) {
           margin-right: 20px; }
-        body form#codraz div#keyzone div#action div.radio {
+        body form#codraz div#keyzone div#action-bloc div#action div.radio {
           width: 15px;
           height: 15px;
           border-radius: 50%;
           border: 2px solid #FF6600;
           display: inline-block; }
-          body form#codraz div#keyzone div#action div.radio:hover {
+          body form#codraz div#keyzone div#action-bloc div#action div.radio:hover {
             cursor: pointer;
             background-color: #FF6600;
             transition: all 0.3s; }
-        body form#codraz div#keyzone div#action div.radio.checked {
+        body form#codraz div#keyzone div#action-bloc div#action div.radio.checked {
           background-color: #FF6600; }
     body form#codraz div#action-hidden {
       width: 50%;
@@ -98,7 +112,7 @@ body {
         border-radius: 10px; }
     body form#codraz div#copyright {
       width: 50%;
-      margin: 0 auto;
+      margin: 40px auto;
       margin-bottom: 15px;
       text-align: center; }
       body form#codraz div#copyright p {
@@ -117,7 +131,7 @@ body {
       form#codraz div#name img {
         width: 65%; }
     form#codraz div#keyzone {
-      width: 75%;
+      width: 90% !important;
       margin: 0 auto;
       margin-bottom: 15px;
       display: flex;
@@ -141,44 +155,44 @@ body {
         font-size: 1.2em;
         padding: 0 10px;
         color: #FFFFFF; }
-      form#codraz div#keyzone div#action {
+      form#codraz div#keyzone div#action-bloc div#action {
         width: 36%;
         padding-top: 15px;
         margin-bottom: 20px;
         display: flex; }
-        form#codraz div#keyzone div#action div.radio-group {
+        form#codraz div#keyzone div#action-bloc div#action div.radio-group {
           font-size: 1.2em;
           display: flex; }
-          form#codraz div#keyzone div#action div.radio-group label {
+          form#codraz div#keyzone div#action-bloc div#action div.radio-group label {
             display: block;
             margin-left: 10px; }
-        form#codraz div#keyzone div#action div.radio-group:nth-child(1) {
+        form#codraz div#keyzone div#action-bloc div#action div.radio-group:nth-child(1) {
           margin-right: 20px; }
-        form#codraz div#keyzone div#action div.radio {
+        form#codraz div#keyzone div#action-bloc div#action div.radio {
           width: 20px;
           height: 20px;
           border-radius: 50%;
           border: 2px solid #FF6600;
           display: inline-block; }
-          form#codraz div#keyzone div#action div.radio:hover {
+          form#codraz div#keyzone div#action-bloc div#action div.radio:hover {
             cursor: pointer;
             background-color: #FF6600;
             transition: all 0.3s; }
-        form#codraz div#keyzone div#action div.radio.checked {
+        form#codraz div#keyzone div#action-bloc div#action div.radio.checked {
           background-color: #FF6600; }
     form#codraz div#action-hidden {
-      width: 75%;
+      width: 90% !important;
       margin: 0 auto;
       margin-bottom: 15px; }
       form#codraz div#action-hidden input {
         display: none; }
     form#codraz div#inout {
-      width: 73%;
+      width: 88% !important;
       margin: 0 auto;
       margin-bottom: 15px; }
       form#codraz div#inout textarea {
         width: 100%;
-        height: 250px;
+        height: 380px !important;
         padding: 10px;
         background-color: #333333;
         border-radius: 10px;
@@ -189,7 +203,7 @@ body {
         outline: none;
         margin-left: -1.3%; }
     form#codraz div#submit {
-      width: 75%;
+      width: 90% !important;
       margin: 0 auto;
       margin-bottom: 15px;
       text-align: right; }
@@ -202,7 +216,7 @@ body {
         border: none;
         border-radius: 10px; }
     form#codraz div#copyright {
-      width: 75%;
+      width: 90% !important;
       margin: 0 auto;
       margin-bottom: 15px;
       text-align: center; }
@@ -219,16 +233,13 @@ body {
     margin: 0px !important; }
     form#codraz div#name {
       display: none; }
-    form#codraz div#logo {
-      display: block; }
     form#codraz div#keyzone {
-      width: 95% !important;
-      border: 1px solid red; }
+      width: 95% !important; }
       form#codraz div#keyzone span {
         width: 35% !important; }
       form#codraz div#keyzone input {
         display: inline-block;
-        width: 50% !important;
+        width: 50%;
         margin-right: 20px;
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
@@ -238,31 +249,34 @@ body {
         font-size: 1.2em;
         padding: 0 10px;
         color: #FFFFFF; }
-      form#codraz div#keyzone div#action {
-        width: 36%;
-        padding-top: 15px;
-        margin-bottom: 20px;
-        display: flex; }
-        form#codraz div#keyzone div#action div.radio-group {
-          font-size: 1.2em;
-          display: flex; }
-          form#codraz div#keyzone div#action div.radio-group label {
-            display: block;
-            margin-left: 10px; }
-        form#codraz div#keyzone div#action div.radio-group:nth-child(1) {
-          margin-right: 20px; }
-        form#codraz div#keyzone div#action div.radio {
-          width: 20px;
-          height: 20px;
-          border-radius: 50%;
-          border: 2px solid #FF6600;
-          display: inline-block; }
-          form#codraz div#keyzone div#action div.radio:hover {
-            cursor: pointer;
-            background-color: #FF6600;
-            transition: all 0.3s; }
-        form#codraz div#keyzone div#action div.radio.checked {
-          background-color: #FF6600; }
+      form#codraz div#keyzone div#action-bloc {
+        width: 100%;
+        margin-bottom: 15px; }
+        form#codraz div#keyzone div#action-bloc div#action {
+          width: 100% !important;
+          padding-top: 15px;
+          display: flex;
+          margin: 0px; }
+          form#codraz div#keyzone div#action-bloc div#action div.radio-group {
+            font-size: 1.2em;
+            display: flex; }
+            form#codraz div#keyzone div#action-bloc div#action div.radio-group label {
+              display: block;
+              margin-left: 10px; }
+          form#codraz div#keyzone div#action-bloc div#action div.radio-group:nth-child(1) {
+            margin-right: 20px; }
+          form#codraz div#keyzone div#action-bloc div#action div.radio {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid #FF6600;
+            display: inline-block; }
+            form#codraz div#keyzone div#action-bloc div#action div.radio:hover {
+              cursor: pointer;
+              background-color: #FF6600;
+              transition: all 0.3s; }
+          form#codraz div#keyzone div#action-bloc div#action div.radio.checked {
+            background-color: #FF6600; }
     form#codraz div#action-hidden {
       width: 75%;
       margin: 0 auto; }
@@ -272,7 +286,8 @@ body {
       width: 93% !important;
       margin: 0 auto; }
       form#codraz div#inout textarea {
-        width: 96% !important; }
+        width: 96% !important;
+        height: 250px !important; }
     form#codraz div#submit {
       width: 95% !important; }
       form#codraz div#submit input {
@@ -289,5 +304,35 @@ body {
           margin-right: 5px;
           padding-right: 5px;
           border-right: 1px dotted #737373; } }
+@media (min-width: 450px) and (max-width: 769px) {
+  div#action-bloc {
+    display: flex;
+    margin-top: 15px; }
+    div#action-bloc img {
+      width: 60px;
+      height: 60px;
+      display: inline-block !important;
+      margin-right: 20px; } }
+@media (min-width: 0px) and (max-width: 440px) {
+  div#keyzone ::placeholder {
+    color: #808080 !important;
+    opacity: 1;
+    /* Firefox */ }
+  div#keyzone :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #808080 !important; }
+  div#keyzone ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #808080 !important; }
+  div#keyzone span {
+    width: 0% !important;
+    display: none !important; }
+  div#keyzone input {
+    display: block !important;
+    width: 100% !important;
+    padding: 6px 10px !important;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: relative !important; } }
 
 /*# sourceMappingURL=codraz.css.map */

@@ -1,6 +1,8 @@
 body{
 	background-color: #202020;
 	color: #FFFFFF;
+	margin: 0px;
+	padding: 0px;
 	font-family: Arial, serif, sans-serif;
 
 	form#codraz{
@@ -17,15 +19,24 @@ body{
 			}
 		}
 
-		div#logo{
-			display: none;
-		}
-
 		div#keyzone{
 			width: 50%;
 			margin: 0 auto;
 			margin-bottom: 15px;
 			display: flex;
+
+			::placeholder {
+			    color: #333333;
+			    opacity: 1; /* Firefox */
+			}
+
+			:-ms-input-placeholder { /* Internet Explorer 10-11 */
+			   color: #333333;
+			}
+
+			::-ms-input-placeholder { /* Microsoft Edge */
+			   color: #333333;
+			}
 
 			span{
 				display: inline-block;
@@ -50,41 +61,51 @@ body{
 				color: #FFFFFF;
 			}
 
-			div#action{
-				width: 36%;
-				padding-top: 15px;
-				display: flex;
+			div#action-bloc{
+				img{
+					display: none;
+				}
 
-				div.radio-group{
-					font-size: 1.2em;
+				div#action{
+					width: 36%;
+					padding-top: 15px;
 					display: flex;
 
-					label{
-						display: block;
-						margin-left: 10px;
+					img{
+						display: none;
 					}
-				}
 
-				div.radio-group:nth-child(1){
-					margin-right: 20px;
-				}
+					div.radio-group{
+						font-size: 1.2em;
+						display: flex;
 
-				div.radio{
-					width: 15px;
-					height: 15px;
-					border-radius: 50%;
-					border: 2px solid #FF6600;
-					display: inline-block;
+						label{
+							display: block;
+							margin-left: 10px;
+						}
+					}
 
-					&:hover{
-						cursor: pointer;
+					div.radio-group:nth-child(1){
+						margin-right: 20px;
+					}
+
+					div.radio{
+						width: 15px;
+						height: 15px;
+						border-radius: 50%;
+						border: 2px solid #FF6600;
+						display: inline-block;
+
+						&:hover{
+							cursor: pointer;
+							background-color: #FF6600;
+							transition: all .3s
+						}
+					}
+
+					div.radio.checked{
 						background-color: #FF6600;
-						transition: all .3s
 					}
-				}
-
-				div.radio.checked{
-					background-color: #FF6600;
 				}
 			}			
 		}
@@ -138,7 +159,7 @@ body{
 
 		div#copyright{
 			width: 50%;
-			margin: 0 auto;
+			margin: 40px auto;
 			margin-bottom: 15px;
 			text-align: center;
 
