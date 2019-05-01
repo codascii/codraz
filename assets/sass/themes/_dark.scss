@@ -1,0 +1,69 @@
+$in-text-color:     rgba(255, 255, 255, 0.7);
+$dark-up:           #282828;
+
+body.dark{
+	background-color: #111111;
+    color: #FFFFFF;
+
+	form#codraz{
+
+		div#keyzone{
+
+			::placeholder {
+			    color: #333333;
+			    opacity: 1; /* Firefox */
+			}
+
+			:-ms-input-placeholder { /* Internet Explorer 10-11 */
+			   color: #333333;
+			}
+
+			::-ms-input-placeholder { /* Microsoft Edge */
+			   color: #333333;
+			}
+
+			span{
+				background-color: $dark-up;
+			}
+
+			input{
+				background-color: #333333;
+				color: $in-text-color;
+			}
+		}
+
+		div#inout{
+
+			textarea{
+				background-color: #333333;
+				color: $in-text-color;
+            }
+            
+            div#change-theme {
+				background-color: $dark-up;
+
+				.theme-button{
+                    &.active, &:hover{						
+						background-color: #ff8533;
+						transition: all .3s;
+					}
+				}
+			}
+		}
+
+		div#copyright{
+
+			p{
+				color: $in-text-color;
+
+				a{
+					color: $in-text-color;
+				}
+
+				strong{
+					border-right: 1px dotted #737373;
+				}
+			}
+		}
+	}
+}

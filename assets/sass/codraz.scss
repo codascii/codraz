@@ -1,15 +1,12 @@
 body{
-	background-color: #202020;
-	color: #FFFFFF;
 	margin: 0px;
 	padding: 0px;
 	font-family: Arial, serif, sans-serif;
+    transition: all 1s;
 
 	form#codraz{
-		/*width: 1080px;*/
 		width: 100%;
 		margin: 0 auto;
-		/*border: 1px solid white;*/
 
 		div#name{
 			text-align: center;
@@ -26,24 +23,10 @@ body{
 			display: flex;
 			position: relative;
 
-			::placeholder {
-			    color: #333333;
-			    opacity: 1; /* Firefox */
-			}
-
-			:-ms-input-placeholder { /* Internet Explorer 10-11 */
-			   color: #333333;
-			}
-
-			::-ms-input-placeholder { /* Microsoft Edge */
-			   color: #333333;
-			}
-
 			span{
 				display: inline-block;
 				width: 18%;
 				padding: 14px 10px;
-				background-color: #1a1a1a;
 				border-top-left-radius: 10px;
 				border-bottom-left-radius: 10px;
 			}
@@ -55,11 +38,9 @@ body{
 				border-top-right-radius: 10px;
 				border-bottom-right-radius: 10px;
 				border: none;
-				background-color: #333333;
 				outline: none;
 				font-size: 1.2em;
-				padding: 0 10px;
-				color: #FFFFFF;
+				padding: 0 10px
 			}
 
 			div#action-bloc{
@@ -135,19 +116,47 @@ body{
 			width: 48%;
 			margin: 0 auto;
 			margin-bottom: 15px;
+			position: relative;
 
 			textarea{
 				width: 100%;
 				height: 250px;
 				padding: 10px;
-				background-color: #333333;
 				border-radius: 10px;
 				border: none;
-				color: #FFFFFF;
 				font-family: Arial, serif, sans-serif;
 				font-size: 1.2em;
 				outline: none;
 				margin-left: -1.3%;
+			}
+
+			div#change-theme {
+				position: absolute;
+				bottom: 12px;
+				left: 0px;
+				width: 120px;
+				border-radius: 20px;
+				color: white;
+				display: flex;
+				justify-content: space-between;
+				font-size: .8em;
+				text-align: center;
+
+				.theme-button{
+					cursor: pointer;
+					padding: 10px;
+					width: 49%;
+
+					&#light-btn {						
+						border-bottom-left-radius: 20px;
+						border-top-left-radius: 20px;
+					}
+
+					&#dark-btn {						
+						border-bottom-right-radius: 20px;
+						border-top-right-radius: 20px;
+					}
+				}
 			}
 		}
 
@@ -175,11 +184,9 @@ body{
 			text-align: center;
 
 			p{
-				color: #737373;
 				font-size: .8em;
 
 				a{
-					color: #797979;
 					font-size: 1.5em;
 					display: inline-block;
 					padding: 0 5px;
@@ -194,12 +201,15 @@ body{
 				strong{
 					margin-right: 5px;
 					padding-right: 5px;
-					border-right: 1px dotted #737373;
 				}
 			}
 		}
 	}
 }
+
+/* Thème */
+@import 'themes/light';
+@import 'themes/dark';
 
 @import 'responsive/tablet';
 @import 'responsive/mobile';

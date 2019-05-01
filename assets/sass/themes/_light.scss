@@ -1,0 +1,73 @@
+$body-bg:       #FFFFFF;
+$body-color:    #969696;
+$light:         #f2f2f2;
+$light-up:      #e0e0e0;
+$in-text-color:     #969696;
+
+
+body.light{
+	background-color: $body-bg;
+	color: $body-color;
+
+	form#codraz{
+
+		div#keyzone{
+
+			::placeholder {
+			    color: $light;
+			    opacity: 1; /* Firefox */
+			}
+
+			:-ms-input-placeholder { /* Internet Explorer 10-11 */
+			   color: $light;
+			}
+
+			::-ms-input-placeholder { /* Microsoft Edge */
+			   color: $light;
+			}
+
+			span{
+				background-color: $light-up;
+			}
+
+			input{
+				background-color: $light;
+				color: $in-text-color;
+			}
+		}
+
+		div#inout{
+
+			textarea{
+				background-color: $light;
+				color: $in-text-color;
+            }
+            
+            div#change-theme {
+				background-color: $light-up;
+
+				.theme-button{
+					&.active, &:hover{						
+						background-color: #ff8533;
+						transition: all .3s;
+					}
+				}
+			}
+		}
+
+		div#copyright{
+
+			p{
+				color: #d9d9d9;
+
+				a{
+					color: #d9d9d9;
+				}
+
+				strong{
+					border-right: 1px dotted #d9d9d9;
+				}
+			}
+		}
+	}
+}

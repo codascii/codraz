@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<meta charset="utf-8"/>
-		<title>Bienvenue sur Codraz</title>
+		<title>Bienvenue sur Codraz - L'application de chiffrement symétrique variable</title>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <meta name="theme-color" content="#007BFF">
         <meta name="application-name" content="Codraz"/>
@@ -13,11 +13,11 @@
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 		<script type="text/javascript" src="assets/js/codraz.js"></script>
 	</head>
-	<body>
+	<body class="light">
 		<form id="codraz" method="post" action="control.php">
 			<div id="name">
 				<!-- Police image : Splincide -->
-				<img src="images/codraz.png" alt="Logo Codraz" />
+				<img src="images/codraz-light.png" id="codraz-title" alt="Logo Codraz" />
 			</div>
 			<div id="keyzone">
 				<span>Clé de chiffrage</span>
@@ -45,6 +45,10 @@
 			</div>
 			<div id="inout">
 				<textarea class="form-control" name="inout" placeholder="Tapez votre texte ici..."><?php if(isset($_SESSION['inout'])) { echo $_SESSION['inout']; unset($_SESSION['inout']); } ?></textarea>
+				<div id="change-theme">
+					<div class="theme-button active" id="light-btn" title="Passer au thème Light">Light</div>
+					<div class="theme-button" id="dark-btn" title="Passer au thème Dark">Dark</div>
+				</div>
 			</div>
 			<div id="submit">
 				<input type="submit" name="bt" id="bt" value="Chiffrer"/>
