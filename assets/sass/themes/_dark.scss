@@ -1,5 +1,6 @@
 $in-text-color:     rgba(255, 255, 255, 0.7);
 $dark-up:           #282828;
+$dark:				#333333;
 
 body.dark{
 	background-color: #111111;
@@ -10,16 +11,16 @@ body.dark{
 		div#keyzone{
 
 			::placeholder {
-			    color: #333333;
+			    color: $dark;
 			    opacity: 1; /* Firefox */
 			}
 
 			:-ms-input-placeholder { /* Internet Explorer 10-11 */
-			   color: #333333;
+			   color: $dark;
 			}
 
 			::-ms-input-placeholder { /* Microsoft Edge */
-			   color: #333333;
+			   color: $dark;
 			}
 
 			span{
@@ -27,7 +28,8 @@ body.dark{
 			}
 
 			input{
-				background-color: #333333;
+				background-color: $dark;
+				border: 1px solid $dark-up;
 				color: $in-text-color;
 			}
 		}
@@ -35,7 +37,8 @@ body.dark{
 		div#inout{
 
 			textarea{
-				background-color: #333333;
+				background-color: $dark;
+				border: 1px solid $dark-up;
 				color: $in-text-color;
             }
             
@@ -47,6 +50,16 @@ body.dark{
 						background-color: #ff8533;
 						transition: all .3s;
 					}
+				}
+			}
+		}
+
+		div#submit{
+			input{
+
+				&:hover {
+					background-color: $dark;
+					border: 1px solid $dark-up;
 				}
 			}
 		}

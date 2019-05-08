@@ -76,4 +76,58 @@ document.addEventListener("DOMContentLoaded", function() {
 			body.classList.remove('dark');
 		}
 	});
+
+	var btChifferDechiffrer = document.getElementById('bt');
+	btChifferDechiffrer.addEventListener('click', function (event) {
+		event.preventDefault();
+		const keyInput = document.getElementById('key');
+		const key = keyInput.value;
+		const messageArea = document.querySelector('textarea')
+		const message = messageArea.value;
+		const actions = document.getElementsByName('action');
+		const action = actions[0].checked ? actions[0].value : actions[1].value;
+		console.log(action);
+		
+
+		console.log(key + ' ... ' + message);
+
+		// Ajax Request
+		var xhr = getXMLHttpRequest();
+
+        xhr.open("POST", "control.php");
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.send('key=' + key + '&inout=' + message + '&bt=&action=' + action);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+				var response = JSON.parse(xhr.responseText);
+
+				if (!response.error) {
+					keyInput.value = response.key;
+					messageArea.value = response.message;
+				}
+            }
+        };
+	});
+
 });
+
+function getXMLHttpRequest() {
+    var xhr = null;
+
+    if (window.XMLHttpRequest || window.ActiveXObject) {
+        if (window.ActiveXObject) {
+            try {
+                xhr = new ActiveXObject("Msxml2.XMLHTTP");
+            } catch(e) {
+                xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+        } else {
+            xhr = new XMLHttpRequest();
+        }
+    } else {
+        alert("Votre navigateur ne supporte pas l'objet XMLHTTPRequest...");
+        return null;
+    }
+
+    return xhr;
+}

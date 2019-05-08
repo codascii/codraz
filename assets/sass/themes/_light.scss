@@ -13,6 +13,7 @@ body.light{
 
 		div#keyzone{
 
+
 			::placeholder {
 			    color: $light;
 			    opacity: 1; /* Firefox */
@@ -28,10 +29,12 @@ body.light{
 
 			span{
 				background-color: $light-up;
+				color: white;
 			}
 
 			input{
 				background-color: $light;
+				border: 1px solid $light-up;
 				color: $in-text-color;
 			}
 		}
@@ -40,6 +43,7 @@ body.light{
 
 			textarea{
 				background-color: $light;
+				border: 1px solid $light-up;
 				color: $in-text-color;
             }
             
@@ -51,6 +55,16 @@ body.light{
 						background-color: #ff8533;
 						transition: all .3s;
 					}
+				}
+			}
+		}
+
+		div#submit{
+			input{
+
+				&:hover {
+					background-color: $light;
+					border: 1px solid #e0e0e0;
 				}
 			}
 		}

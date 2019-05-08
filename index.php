@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -14,14 +13,14 @@
 		<script type="text/javascript" src="assets/js/codraz.js"></script>
 	</head>
 	<body class="light">
-		<form id="codraz" method="post" action="control.php">
+		<form id="codraz" method="post">
 			<div id="name">
 				<!-- Police image : Splincide -->
 				<img src="images/codraz-light.png" id="codraz-title" alt="Logo Codraz" />
 			</div>
 			<div id="keyzone">
 				<span>Clé de chiffrage</span>
-				<input type="text" name="key" id="key" placeholder="Clé de chiffrage" value="<?php if(isset($_SESSION['key'])) { echo $_SESSION['key']; unset($_SESSION['key']); } ?>" />
+				<input type="text" name="key" id="key" placeholder="Clé de chiffrage" />
 				<div id="action-bloc">
 					<img src="images/favicon.png" alt="Logo Codraz"/>
 					<div id="action">
@@ -54,6 +53,7 @@
 				<input type="submit" name="bt" id="bt" value="Chiffrer"/>
 			</div>
 			<div id="copyright">
+				<br/>
 				<p>
 					<a href="https://twitter.com/razmoscii" target="_blank"><i class="fa fa-twitter"></i></a>
 					<a href="https://www.instagram.com/codascii" target="_blank"><i class="fa fa-instagram"></i></a>

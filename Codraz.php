@@ -7,6 +7,8 @@ class CODRAZ
 {
 	const CHIFFRER = "chiffrer";
 	const DECHIFFRER = "dechiffrer";
+	const OK = "Ok";
+	const NO_KEY_GIVEN = "Pas de clé renseigner";
 	
 	public static function crypt($text, $key) {
 		//	Initialisation du tableau contenant les caractères chiffrable
